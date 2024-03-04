@@ -1,0 +1,165 @@
+*{
+
+    box-sizing:border-box;
+    /* não sei pra que serve */
+
+}
+
+body {
+    margin: 0;
+   padding: 0;
+   font-family: 'Courier New', Courier, monospace;
+/* vi essa fonte no canva :) */
+   background-color: black;
+
+}
+
+h1 {
+    color: #00CB32;
+    text-align: center;
+    font-size: 3rem;
+}
+
+header {
+    display:flex;
+    /* eu acho que é pros tamanhos dos botões ficarem 
+    fléxiveis conforme mudamos o siteee*/
+    flex-flow: row wrap;
+    align-items: center;
+    width: 50%;
+    /*border: 1px solid blueviolet;*/
+    /*literalmente a bordinha dos botoes. dica: reinem no
+    código pra ver oque acontece :)*/
+    margin: auto auto;
+    /* vai centralizar os botões junto com o width praticamente
+    como foi 90, deixou 5 para um lado e 5 para outro uau */
+
+
+}
+
+input {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0 20px gray;
+    height: 60px;
+    font-size: 3rem;
+    width: 70%;
+    color:blueviolet;
+    background-color: black;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 10px;
+}
+
+button.add {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 60px;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 2%;
+    color: black;
+    background-color: #00CB32;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: auto auto;
+    /*border: 1px solid blue;*/
+    padding-top: 50px;
+    
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 90px;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px gray;
+    margin-bottom: 2%;
+    cursor: pointer;
+    /*para fazer a mãozinha */
+}
+.item.clicado {
+    background-color: #d4f6d9;
+}
+.item.clicado .item-nome {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.item-icone { 
+    flex: 20%;
+   /* border:1px solid orangered;*/
+    text-align: center;
+    font-size: 2rem;
+}
+
+.item-nome {
+    flex: 55%;
+    /*border: 1px solid deeppink;*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+ 
+}
+
+
+.item-botao {
+    flex: 25%;
+    border-radius: 50px;
+   /* border: 1px solid green;*/
+  
+
+ }
+
+ .delete {
+   background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+    border: none;
+    font-size: 2rem;
+    padding: 2px;
+    padding-left: 70px;
+    height: 70px;
+    width: 90%;
+    cursor: pointer;
+    /*border-radius: 40px;*/
+    
+ }
+
+ .mdi-check-circle {
+    color: green;
+
+ }
+ 
+ @media screen and (max-width: 768px) {
+    header {
+        width: 90%; /* Aumentar a largura do cabeçalho */
+    }
+
+    input {
+        width: 60%; /* Reduzir a largura do input */
+    }
+
+    button.add {
+        width: 40%; /* Reduzir a largura do botão */
+    }
+
+    main {
+        padding-top: 20px; /* Reduzir o espaço superior */
+    }
+
+    .item {
+        width: 90%; /* Largura ajustável */
+    }
+}
